@@ -10,16 +10,15 @@
     throw new \PDOException($e->getMessage(), (int)$e->getCode());
   }
 
-  if (isset($_SERVER['PHP_AUTH_USER']) && isset($_SERVER['PHP_AUTH_PW']))
+  if (isset($_SERVER['PHP_AUTH_USER']) &&
+      isset($_SERVER['PHP_AUTH_PW']))
   {
-    die($_SERVER['PHP_AUTH_USER']);
     $un_temp = sanitise($pdo, $_SERVER['PHP_AUTH_USER']);
-    die($un_temp);
     $pw_temp = sanitise($pdo, $_SERVER['PHP_AUTH_PW']);
     $query   = "SELECT * FROM users WHERE username=$un_temp";
     $result  = $pdo->query($query);
 
-    if (!$result->rowCount()) die("User not found"); //FIXME:
+    if (!$result->rowCount()) die("User not found");
 
     $row = $result->fetch();
     $fn  = $row['forename'];
