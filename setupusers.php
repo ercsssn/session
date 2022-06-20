@@ -19,18 +19,18 @@
 
   $result = $pdo->query($query);
 
-  $forename = 'Bill';
-  $surname  = 'Smith';
-  $username = 'bsmith';
-  $password = 'mysecret';
+  $forename = 'John';
+  $surname  = 'Ericsson';
+  $username = 'sony';
+  $password = 'secret';
   $hash     = password_hash($password, PASSWORD_DEFAULT);
   
   add_user($pdo, $forename, $surname, $username, $hash);
 
-  $forename = 'Pauline';
-  $surname  = 'Jones';
-  $username = 'pjones';
-  $password = 'acrobat';
+  $forename = 'Bro';
+  $surname  = 'Jhe';
+  $username = 'jhe';
+  $password = 'secret';
   $hash     = password_hash($password, PASSWORD_DEFAULT);
   
   add_user($pdo, $forename, $surname, $username, $hash);
