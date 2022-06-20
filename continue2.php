@@ -1,4 +1,4 @@
-<?php // 
+<?php // continue.php = version 2
   session_start();
 
   if (isset($_SESSION['forename']))

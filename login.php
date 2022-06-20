@@ -1,5 +1,4 @@
-<?php 
-
+<?php // login.php
   $host = 'localhost';
   $data = 'publications';
   $user = 'root';         // Change as necessary

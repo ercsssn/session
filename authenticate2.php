@@ -1,4 +1,4 @@
-<?php 
+<?php // authenticate2.php
   require_once 'login.php';
 
   try

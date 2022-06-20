@@ -1,4 +1,4 @@
-<?php 
+<?php //setupusers.php
   require_once 'login.php';
 
   try
@@ -19,18 +19,18 @@
 
   $result = $pdo->query($query);
 
-  $forename = 'John';
-  $surname  = 'Ericsson';
-  $username = 'ercsssn';
+  $forename = 'Bill';
+  $surname  = 'Smith';
+  $username = 'bsmith';
   $password = 'mysecret';
   $hash     = password_hash($password, PASSWORD_DEFAULT);
   
   add_user($pdo, $forename, $surname, $username, $hash);
 
-  $forename = 'Jhe';
-  $surname  = 'Dadap';
-  $username = 'ucoin';
-  $password = 'ucoin@2022';
+  $forename = 'Pauline';
+  $surname  = 'Jones';
+  $username = 'pjones';
+  $password = 'acrobat';
   $hash     = password_hash($password, PASSWORD_DEFAULT);
   
   add_user($pdo, $forename, $surname, $username, $hash);
@@ -47,4 +47,3 @@
     $stmt->execute([$fn, $sn, $un, $pw]);
   }
 ?>
-
